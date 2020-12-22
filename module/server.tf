@@ -1,5 +1,5 @@
 resource "google_compute_instance" "quick-server" {
-  name         = "quick-server"
+  name         = "{var.owner}-quick-server"
   machine_type = var.machine-type
   zone         = var.region-zone
 
@@ -12,18 +12,18 @@ resource "google_compute_instance" "quick-server" {
   }
 
   network_interface {
-    network = "default"
+    network = google_compute_network.vpc.id
 
     access_config {
     }
   }
 
   service_account {
-    email = "55723675297-compute@developer.gserviceaccount.com"
+    email = var.service_account_email
     scopes = ["cloud-platform"]
   }
 
   labels = {
-    "Name" = "quick-server"
+    "Name" = "{var.owner}-quick-server"
   }
 }

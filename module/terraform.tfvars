@@ -1,16 +1,16 @@
-owner = ""
+owner = "af"
 region = ""
 project = ""
-credentials = "~/google-cloud-sdk/af-test-project-276523-4a44fabd7342.json"
+credentials_file = ""
 
-machine-type = "n1-standard-1"
+machine-type = "n2-standard-2"
 region-zone = "us-west1-a"
-disk-image = "centos-8-v20200618"
+disk-image = ""
 disk-image-type = "pd-ssd"
 disk-image-size = 64
 
 # service account
-email = "" # example: <id-compute>@developer.gserviceaccount.com
+service_account_email = "" # example: <id-compute>@developer.gserviceaccount.com
 scopes = [
   "cloud-platform"
 ]

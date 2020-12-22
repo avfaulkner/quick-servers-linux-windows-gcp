@@ -1,6 +1,6 @@
 resource "google_compute_firewall" "default" {
   name    = "firewall"
-  network = google_compute_network.default.name
+  network = google_compute_network.vpc.name
 
   allow {
     protocol = "tcp"
@@ -11,9 +11,5 @@ resource "google_compute_firewall" "default" {
     ports    = ["80", "443", "22"]
   }
 
-  source_tags = ["web"]
-}
-
-resource "google_compute_network" "default" {
-  name = "test-network"
+  source_tags = ["quick-server"]
 }

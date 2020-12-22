@@ -1,7 +1,7 @@
 # provider
 variable "region" {}
 variable "project" {}
-variable "credentials" {}
+variable "credentials_file" {}
 
 # server
 variable "machine-type" {}
@@ -11,7 +11,7 @@ variable "disk-image-type" {}
 variable "disk-image-size" {}
 
 # service account
-variable "email" {}
+variable "service_account_email" {}
 variable "scopes" {
   type = list(string)
 }
