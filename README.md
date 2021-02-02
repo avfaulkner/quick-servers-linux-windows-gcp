@@ -17,7 +17,8 @@ This stack builds quick Ubuntu 20.04 and Windows Server 2019 servers and basic n
 1. Clone the repo onto your local workstation
 2. cd into quick-servers-linux-windows-gcp/server-linux or quick-servers-linux-windows-gcp/server-windows
 3. Add your desired variables to the server-linux/terraform.tfvars and server-windows/terraform.tfvars files
-4. Use the commands below to initialize the terraform code, plan and apply to build the infrastructure. 
+4. CD into either the server-linux or server-windows directory to build a linux or windows server. 
+5. Use the commands below to initialize the terraform code, plan and apply to build the infrastructure.
 
 
 Initialize the environment
